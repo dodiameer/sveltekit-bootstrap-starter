@@ -1,7 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
 	import '../app.scss';
 	const BRAND_NAME = 'SvelteBootsrap';
+
+  /* Load Bootstrap on mount 
+  ? because it relies on "document" being present
+  ? Stored in "window.bootsrap" - components rely on this value
+  */
 	onMount(async () => {
 		(window as any).bootstrap = await import('bootstrap');
 	});
