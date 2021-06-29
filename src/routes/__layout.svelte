@@ -1,2 +1,4 @@
-<script>import "../app.postcss";</script>
+<script lang="ts">
+  import "../app.scss";
+</script>
 <slot></slot>
