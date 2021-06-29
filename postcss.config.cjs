@@ -13,7 +13,8 @@ const config = {
 	plugins: [
 		autoprefixer(),
 		!dev && purgecss({
-			content: ["./src/**/*.html", "./src/**/*.svelte"]
+			content: ["./src/**/*.html", "./src/**/*.svelte"],
+			safelist: [/svelte-/],
 		}),
 		!dev && cssnano({
 			preset: "default",
